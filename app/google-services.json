@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1060093226949",
+    "firebase_url": "https://facedect.firebaseio.com",
+    "project_id": "facedect",
+    "storage_bucket": "facedect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060093226949:android:ea153dc49ff20a06d025ac",
+        "android_client_info": {
+          "package_name": "com.example.facedect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060093226949-uiolg1pdtbosv4fv41eqcr5igjqksuf9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV6hXZUB8rx7J0oxfGNJq2sfGmycBQA_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060093226949-uiolg1pdtbosv4fv41eqcr5igjqksuf9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
