@@ -5,11 +5,13 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.google.android.gms.tasks.Task;
+
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.face.FirebaseVisionFace;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetector;
 import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
+
 import com.example.facedect.FrameMetadata;
 import com.example.facedect.GraphicOverlay;
 import com.example.facedect.VisionProcessorBase;
@@ -17,20 +19,12 @@ import com.example.facedect.VisionProcessorBase;
 import java.io.IOException;
 import java.util.List;
 
-/** Face Detector Demo. */
 public class FaceDetectionProcessor extends VisionProcessorBase<List<FirebaseVisionFace>> {
-
   private static final String TAG = "FaceDetectionProcessor";
-
   private final FirebaseVisionFaceDetector detector;
 
   public FaceDetectionProcessor() {
-    FirebaseVisionFaceDetectorOptions options =
-        new FirebaseVisionFaceDetectorOptions.Builder()
-            .setClassificationType(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS)
-            .setTrackingEnabled(true)
-            .build();
-
+    FirebaseVisionFaceDetectorOptions options = new FirebaseVisionFaceDetectorOptions.Builder().setClassificationType(FirebaseVisionFaceDetectorOptions.ALL_CLASSIFICATIONS).setTrackingEnabled(true).build();
     detector = FirebaseVision.getInstance().getVisionFaceDetector(options);
   }
 
@@ -49,10 +43,7 @@ public class FaceDetectionProcessor extends VisionProcessorBase<List<FirebaseVis
   }
 
   @Override
-  protected void onSuccess(
-      @NonNull List<FirebaseVisionFace> faces,
-      @NonNull FrameMetadata frameMetadata,
-      @NonNull GraphicOverlay graphicOverlay) {
+  protected void onSuccess(@NonNull List<FirebaseVisionFace> faces, @NonNull FrameMetadata frameMetadata, @NonNull GraphicOverlay graphicOverlay) {
     graphicOverlay.clear();
     for (int i = 0; i < faces.size(); ++i) {
       FirebaseVisionFace face = faces.get(i);

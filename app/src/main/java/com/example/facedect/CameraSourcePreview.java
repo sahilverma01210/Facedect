@@ -13,16 +13,13 @@ import com.google.android.gms.common.images.Size;
 
 import java.io.IOException;
 
-/** Preview the camera image in the screen. */
 public class CameraSourcePreview extends ViewGroup {
   private static final String TAG = "MIDemoApp:Preview";
-
   private Context context;
   private SurfaceView surfaceView;
   private boolean startRequested;
   private boolean surfaceAvailable;
   private CameraSource cameraSource;
-
   private GraphicOverlay overlay;
 
   public CameraSourcePreview(Context context, AttributeSet attrs) {
@@ -30,7 +27,6 @@ public class CameraSourcePreview extends ViewGroup {
     this.context = context;
     startRequested = false;
     surfaceAvailable = false;
-
     surfaceView = new SurfaceView(context);
     surfaceView.getHolder().addCallback(new SurfaceCallback());
     addView(surfaceView);
@@ -40,9 +36,7 @@ public class CameraSourcePreview extends ViewGroup {
     if (cameraSource == null) {
       stop();
     }
-
     this.cameraSource = cameraSource;
-
     if (this.cameraSource != null) {
       startRequested = true;
       startIfReady();

@@ -42,12 +42,6 @@
       android:layout_toEndOf="@id/firePreview"
       android:background="#ffff">
 
-      <Spinner
-          android:id="@+id/spinner"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:visibility="invisible"/>
 
       <ToggleButton
           android:id="@+id/facingswitch"
